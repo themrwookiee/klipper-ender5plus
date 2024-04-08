@@ -29,7 +29,7 @@ trusted_clients =
 
 [announcements]
 subscriptions = 
-	mainsail
+	octoapp.
 
 [update_manager]
 refresh_interval = 168
@@ -76,4 +76,19 @@ origin = https://github.com/nlef/moonraker-telegram-bot.git
 env = ~/moonraker-telegram-bot-env/bin/python
 requirements = scripts/requirements.txt
 install_script = scripts/install.sh
+
+[spoolman]
+server = http://10.0.0.4:7912
+sync_rate = 5
+
+[update_manager octoapp]
+type = git_repo
+channel = beta
+path = /home/pi/octoapp
+origin = https://github.com/crysxd/OctoApp-Plugin.git
+env = /home/pi/octoapp-env/bin/python
+requirements = requirements.txt
+install_script = install.sh
+managed_services = 
+	octoapp
 
