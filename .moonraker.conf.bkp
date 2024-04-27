@@ -96,6 +96,14 @@ requirements = scripts/KlipperScreen-requirements.txt
 system_dependencies = scripts/system-dependencies.json
 managed_services = KlipperScreen
 
+[update_manager client moonraker-telegram]
+type = git_repo
+path = /home/pi/moonraker-telegram
+origin = https://github.com/Raabi91/moonraker-telegram.git
+env = /home/pi/.moonraker-telegram-env/bin/python
+requirements = scripts/moonraker-telegram-requirements.txt
+install_script = scripts/install.sh
+
 [update_manager moonraker-telegram-bot]
 type = git_repo
 path = ~/moonraker-telegram-bot
